@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 
 const Counter = () => {
-  const [counter, setCounter] = useState(10);
+  const [counter, setCounter] = useState(0);
 
   const handleAddCount = () => {
-    setCounter(counter + 1);
+    if (counter < 20) {
+      setCounter(counter + 1);
+    }
   };
 
   const handleRemove = () => {
-    setCounter(counter - 1);
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
   };
   return (
     <div>
